@@ -1,0 +1,21 @@
+version: '3.4'
+
+services:
+  serpost.monitoreo.web:
+    image: ${DOCKER_REGISTRY-}serpostmonitoreoweb
+    build:
+      context: .
+      dockerfile: serpost.monitoreo.web/Dockerfile
+      args:
+        - skip_client_build=true
+
+  serpost.monitoreo.web.app:
+    image: ${DOCKER_REGISTRY-}elsawebapp
+    build:
+      context: .
+      dockerfile: serpost.monitoreo.web/ClientApp/Dockerfile
+    ports:
+      - "4200:4200" 
+      - "49153:49153"
+    volumes:
+      - ./serpost.monitoreo.web/ClientApp:/app

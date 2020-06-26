@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30128.74
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "serpost.monitoreo.data", "serpost.monitoreo.data\serpost.monitoreo.data.csproj", "{BC8D5211-5883-4D4F-BB34-08FE7A98339F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "serpost.monitoreo.core", "serpost.monitoreo.core\serpost.monitoreo.core.csproj", "{9EFE9A77-399E-4775-BDF2-0D3D059F9049}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "serpost.monitoreo.web", "serpost.monitoreo.web\serpost.monitoreo.web.csproj", "{D1A7392D-A4BB-426E-9566-0490ED2591C2}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{CC11271D-27AC-465F-A6D0-95CCEC89A97E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BC8D5211-5883-4D4F-BB34-08FE7A98339F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC8D5211-5883-4D4F-BB34-08FE7A98339F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC8D5211-5883-4D4F-BB34-08FE7A98339F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC8D5211-5883-4D4F-BB34-08FE7A98339F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EFE9A77-399E-4775-BDF2-0D3D059F9049}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EFE9A77-399E-4775-BDF2-0D3D059F9049}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EFE9A77-399E-4775-BDF2-0D3D059F9049}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EFE9A77-399E-4775-BDF2-0D3D059F9049}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1A7392D-A4BB-426E-9566-0490ED2591C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1A7392D-A4BB-426E-9566-0490ED2591C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1A7392D-A4BB-426E-9566-0490ED2591C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1A7392D-A4BB-426E-9566-0490ED2591C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC11271D-27AC-465F-A6D0-95CCEC89A97E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC11271D-27AC-465F-A6D0-95CCEC89A97E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC11271D-27AC-465F-A6D0-95CCEC89A97E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC11271D-27AC-465F-A6D0-95CCEC89A97E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {82432B8F-0755-4F0B-893D-B60522A8F6A0}
+	EndGlobalSection
+EndGlobal

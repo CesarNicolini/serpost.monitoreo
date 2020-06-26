@@ -1,0 +1,33 @@
+#See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
+
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-buster-slim AS base
+WORKDIR /app
+EXPOSE 80
+EXPOSE 443
+
+FROM node:10.15-alpine AS client 
+ARG skip_client_build=false 
+WORKDIR /app 
+COPY serpost.monitoreo.web/ClientApp . 
+RUN [[ ${skip_client_build} = true ]] && echo "Skipping npm install" || npm install 
+RUN [[ ${skip_client_build} = true ]] && mkdir dist || npm run-script build
+
+
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
+WORKDIR /src
+COPY ["serpost.monitoreo.web/serpost.monitoreo.web.csproj", "serpost.monitoreo.web/"]
+COPY ["serpost.monitoreo.data/serpost.monitoreo.data.csproj", "serpost.monitoreo.data/"]
+COPY ["serpost.monitoreo.core/serpost.monitoreo.core.csproj", "serpost.monitoreo.core/"]
+RUN dotnet restore "serpost.monitoreo.web/serpost.monitoreo.web.csproj"
+COPY . .
+WORKDIR "/src/serpost.monitoreo.web"
+RUN dotnet build "serpost.monitoreo.web.csproj" -c Release -o /app/build
+
+FROM build AS publish
+RUN dotnet publish "serpost.monitoreo.web.csproj" -c Release -o /app/publish
+
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app/publish .
+COPY --from=client /app/dist /app/dist 
+ENTRYPOINT ["dotnet", "serpost.monitoreo.web.dll"]

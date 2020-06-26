@@ -59,17 +59,17 @@ namespace serpost.monitoreo.data.Migrations
                         new
                         {
                             id_camara = (short)1,
-                            url_camara = "http://192.168.1.3:8081/"
+                            url_camara = "http://10.147.17.111:3333/"
                         },
                         new
                         {
                             id_camara = (short)2,
-                            url_camara = "http://192.168.1.3:8081/"
+                            url_camara = "http://10.147.17.99:8080/"
                         },
                         new
                         {
                             id_camara = (short)3,
-                            url_camara = "http://192.168.1.3:8081/"
+                            url_camara = "http://10.147.17.20:8080/"
                         });
                 });
 

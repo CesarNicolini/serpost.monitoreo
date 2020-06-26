@@ -4,7 +4,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace serpost.monitoreo.data.Migrations
 {
-    public partial class Migration1 : Migration
+    public partial class migration001 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -86,9 +86,9 @@ namespace serpost.monitoreo.data.Migrations
                 columns: new[] { "id_camara", "url_camara" },
                 values: new object[,]
                 {
-                    { (short)1, "http://192.168.1.3:8081/" },
-                    { (short)2, "http://192.168.1.3:8081/" },
-                    { (short)3, "http://192.168.1.3:8081/" }
+                    { (short)1, "http://10.147.17.111:3333/" },
+                    { (short)2, "http://10.147.17.99:8080/" },
+                    { (short)3, "http://10.147.17.20:8080/" }
                 });
 
             migrationBuilder.InsertData(

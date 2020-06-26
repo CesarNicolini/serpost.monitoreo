@@ -10,8 +10,8 @@ using serpost.monitoreo.data;
 namespace serpost.monitoreo.data.Migrations
 {
     [DbContext(typeof(EFDataContext))]
-    [Migration("20200622233227_Migration1")]
-    partial class Migration1
+    [Migration("20200626185636_migration001")]
+    partial class migration001
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -61,17 +61,17 @@ namespace serpost.monitoreo.data.Migrations
                         new
                         {
                             id_camara = (short)1,
-                            url_camara = "http://192.168.1.3:8081/"
+                            url_camara = "http://10.147.17.111:3333/"
                         },
                         new
                         {
                             id_camara = (short)2,
-                            url_camara = "http://192.168.1.3:8081/"
+                            url_camara = "http://10.147.17.99:8080/"
                         },
                         new
                         {
                             id_camara = (short)3,
-                            url_camara = "http://192.168.1.3:8081/"
+                            url_camara = "http://10.147.17.20:8080/"
                         });
                 });
 

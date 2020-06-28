@@ -33,7 +33,7 @@ namespace serpost.monitoreo.web
 
             services.AddSpaStaticFiles(configuration =>
             {
-                configuration.RootPath = "/app/dist";    ///app/dist
+                configuration.RootPath = "/app/wwwroot/dist";    ///app/dist
             });
 
             //services.AddSpaStaticFiles(configuration =>

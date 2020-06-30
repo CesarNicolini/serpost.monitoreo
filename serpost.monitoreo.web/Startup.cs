@@ -27,6 +27,14 @@ namespace serpost.monitoreo.web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
+            {
+                builder.AllowAnyOrigin()
+                       .AllowAnyMethod()
+                       .AllowAnyHeader();
+                       //.AllowCredentials();
+            }));
+
             services.AddControllersWithViews();
             // In production, the Angular files will be served from this directory
 
@@ -40,7 +48,9 @@ namespace serpost.monitoreo.web
             //{
             //    configuration.RootPath = "ClientApp/dist";
             //});
-                
+
+           
+
             #region configuración de EF-CORE
             services.AddDbContext<EFDataContext>
                 (option => option.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));//, b => b.MigrationsAssembly("isp.platformb2b.invoicing.web")));
@@ -86,6 +96,8 @@ namespace serpost.monitoreo.web
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseCors("MyPolicy");
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -129,7 +141,7 @@ namespace serpost.monitoreo.web
                 if (env.IsDevelopment())
                 {
                     ///spa.UseAngularCliServer(npmScript: "start");
-                    spa.UseProxyToSpaDevelopmentServer("http://serpost.monitoreo.web.app:4200");
+                    spa.UseProxyToSpaDevelopmentServer("http://localhost:4200");
                 }
             });
         }

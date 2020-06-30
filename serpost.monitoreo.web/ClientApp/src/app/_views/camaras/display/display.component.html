@@ -1,0 +1,9 @@
+<div class="card mt-4">
+    <h4 class="card-header">Cámaras</h4>
+    <div class="card-body">
+        <div *ngFor="let cam  of cams">
+            <!-- href="{{cam.url_camara}}" -->
+            <li><a target="_blank" [routerLink]="['/monitor']" [queryParams]="{ urlx: cam.url_camara}">camara {{cam.id_camara}}</a></li>
+        </div>
+    </div>
+</div> 

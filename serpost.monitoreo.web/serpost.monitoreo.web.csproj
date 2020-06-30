@@ -58,6 +58,10 @@
     <Content Remove="wwwroot\dist\vendor-es2015.js.map" />
     <Content Remove="wwwroot\dist\vendor-es5.js" />
     <Content Remove="wwwroot\dist\vendor-es5.js.map" />
+    <Content Remove="wwwroot\dist\_views-camaras-camaras-module-es2015.js" />
+    <Content Remove="wwwroot\dist\_views-camaras-camaras-module-es2015.js.map" />
+    <Content Remove="wwwroot\dist\_views-camaras-camaras-module-es5.js" />
+    <Content Remove="wwwroot\dist\_views-camaras-camaras-module-es5.js.map" />
   </ItemGroup>
 
   <ItemGroup>
@@ -80,6 +84,10 @@
     <None Include="wwwroot\dist\vendor-es2015.js.map" />
     <None Include="wwwroot\dist\vendor-es5.js" />
     <None Include="wwwroot\dist\vendor-es5.js.map" />
+    <None Include="wwwroot\dist\_views-camaras-camaras-module-es2015.js" />
+    <None Include="wwwroot\dist\_views-camaras-camaras-module-es2015.js.map" />
+    <None Include="wwwroot\dist\_views-camaras-camaras-module-es5.js" />
+    <None Include="wwwroot\dist\_views-camaras-camaras-module-es5.js.map" />
   </ItemGroup>
 
   <ItemGroup>

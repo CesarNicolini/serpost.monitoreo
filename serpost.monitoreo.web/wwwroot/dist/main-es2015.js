@@ -35,7 +35,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n\n\n<iframe [src]=\"urlx | safe\" frameborder=\"0\"></iframe>\n\n<p>segura {{urlx | safe}} </p>\n<p>trucha {{urlx}} </p>\n\n\n\n<iframe src=\"http://192.168.1.6:8080/\" frameborder=\"0\"></iframe>\n\n<iframe src=\"https://192.168.1.6:8080/\" frameborder=\"0\"></iframe>\n\n<iframe src=\"192.168.1.6:8080/\" frameborder=\"0\"></iframe>\n\n<iframe src=\"//192.168.1.6:8080/\" frameborder=\"0\"></iframe>\n\n<br>\n\n\n<iframe src=\"http://192.168.1.6:8080/ | safe\" frameborder=\"0\"></iframe>\n\n<iframe src=\"https://192.168.1.6:8080/ | safe\" frameborder=\"0\"></iframe>\n\n<iframe src=\"192.168.1.6:8080/ | safe\" frameborder=\"0\"></iframe>\n\n<iframe src=\"//192.168.1.6:8080/ | safe\" frameborder=\"0\"></iframe>");
+/* harmony default export */ __webpack_exports__["default"] = ("\n\n<!-- \n<iframe [src]=\"urlx | safe\" frameborder=\"0\"></iframe> -->\n\n<p>segura {{urlx | safe}} </p>\n<p>trucha {{urlx}} </p>\n\n\n\n<iframe [src]=\"urlx\" frameborder=\"0\"></iframe>\n\n<iframe [src]=\"seguro(urlx)\" frameborder=\"0\"></iframe>\n\n<iframe [src]=\"dos_barras(urlx)\" frameborder=\"0\"></iframe>\n\n<br>\n\n\n<iframe [src]=\"urlx | safe\" frameborder=\"0\"></iframe>\n\n<iframe [src]=\"seguro(urlx)| safe\" frameborder=\"0\"></iframe>\n\n<iframe [src]=\"dos_barras(urlx) | safe\" frameborder=\"0\"></iframe>");
 
 /***/ }),
 
@@ -318,6 +318,12 @@ let MonitorComponent = class MonitorComponent {
             //this.urlx = this.urlx.replace("http:","")
             console.log(this.urlx);
         });
+    }
+    dos_barras(url) {
+        return url.replace("http:", "");
+    }
+    seguro(url) {
+        return url.replace("http", "https");
     }
 };
 MonitorComponent.ctorParameters = () => [

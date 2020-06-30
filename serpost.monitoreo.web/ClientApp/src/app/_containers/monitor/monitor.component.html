@@ -1,28 +1,24 @@
 
 
-
-<iframe [src]="urlx | safe" frameborder="0"></iframe>
+<!-- 
+<iframe [src]="urlx | safe" frameborder="0"></iframe> -->
 
 <p>segura {{urlx | safe}} </p>
 <p>trucha {{urlx}} </p>
 
 
+<!-- 
+<iframe [src]="urlx" frameborder="0"></iframe>
 
-<iframe src="http://192.168.1.6:8080/" frameborder="0"></iframe>
+<iframe [src]="seguro(urlx)" frameborder="0"></iframe>
 
-<iframe src="https://192.168.1.6:8080/" frameborder="0"></iframe>
-
-<iframe src="192.168.1.6:8080/" frameborder="0"></iframe>
-
-<iframe src="//192.168.1.6:8080/" frameborder="0"></iframe>
+<iframe [src]="dos_barras(urlx)" frameborder="0"></iframe> -->
 
 <br>
 
 
-<iframe src="http://192.168.1.6:8080/ | safe" frameborder="0"></iframe>
+<iframe [src]="urlx | safe" frameborder="0"></iframe>
 
-<iframe src="https://192.168.1.6:8080/ | safe" frameborder="0"></iframe>
+<iframe [src]="seguro(urlx)| safe" frameborder="0"></iframe>
 
-<iframe src="192.168.1.6:8080/ | safe" frameborder="0"></iframe>
-
-<iframe src="//192.168.1.6:8080/ | safe" frameborder="0"></iframe>
+<iframe [src]="dos_barras(urlx) | safe" frameborder="0"></iframe>

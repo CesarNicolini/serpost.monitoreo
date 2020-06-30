@@ -22,4 +22,16 @@ export class MonitorComponent implements OnInit {
     })
   }
 
+  dos_barras (url)
+  {
+    return url.replace ("http:","")
+  }
+
+  seguro (url)
+  {
+    return  url.replace ("http","https")
+  }
+
+  
+
 }

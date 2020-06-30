@@ -30,15 +30,15 @@ namespace serpost.monitoreo.web
             
             
             
-            services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
-            {
-                builder.WithOrigins("http://10.147.17.99:8080/")
-                        //.AllowAnyOrigin()
-                        .AllowAnyMethod()
-                        .AllowAnyHeader()
-                        .AllowCredentials();
-                       //.AllowCredentials();
-            }));
+            //services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
+            //{
+            //    builder.WithOrigins("http://10.147.17.99:8080/")
+            //            //.AllowAnyOrigin()
+            //            .AllowAnyMethod()
+            //            .AllowAnyHeader()
+            //            .AllowCredentials();
+            //           //.AllowCredentials();
+            //}));
 
             services.AddControllersWithViews();
             // In production, the Angular files will be served from this directory
@@ -101,7 +101,7 @@ namespace serpost.monitoreo.web
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            app.UseCors("MyPolicy");
+            //app.UseCors("MyPolicy");
 
             if (env.IsDevelopment())
             {
@@ -114,7 +114,7 @@ namespace serpost.monitoreo.web
                 app.UseHsts();
             }
 
-            //app.UseHttpsRedirection();
+            app.UseHttpsRedirection();
 
             
 

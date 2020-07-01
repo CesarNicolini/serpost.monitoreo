@@ -41,14 +41,14 @@ namespace serpost.monitoreo.web
             //}));
 
 
-            services.AddCors(options =>
-            {
-                options.AddPolicy("AllowAnyOrigin",
-                    builder => builder
-                    .AllowAnyOrigin()
-                    .AllowAnyMethod()
-                    .AllowAnyHeader());
-            });
+            //services.AddCors(options =>
+            //{
+            //    options.AddPolicy("AllowAnyOrigin",
+            //        builder => builder
+            //        .AllowAnyOrigin()
+            //        .AllowAnyMethod()
+            //        .AllowAnyHeader());
+            //});
 
             
 
@@ -113,7 +113,7 @@ namespace serpost.monitoreo.web
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            app.UseCors("AllowAnyOrigin");
+            //app.UseCors("AllowAnyOrigin");
 
             //app.UseCors(builder => builder
             //    .AllowAnyHeader()

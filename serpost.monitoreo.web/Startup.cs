@@ -27,9 +27,9 @@ namespace serpost.monitoreo.web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            
-            
-            
+
+
+
             //services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
             //{
             //    builder.WithOrigins("http://10.147.17.99:8080/")
@@ -39,6 +39,18 @@ namespace serpost.monitoreo.web
             //            .AllowCredentials();
             //           //.AllowCredentials();
             //}));
+
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAnyOrigin",
+                    builder => builder
+                    .AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    .AllowAnyHeader());
+            });
+
+            
 
             services.AddControllersWithViews();
             // In production, the Angular files will be served from this directory
@@ -101,14 +113,14 @@ namespace serpost.monitoreo.web
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            //app.UseCors("MyPolicy");
+            app.UseCors("AllowAnyOrigin");
 
-            app.UseCors(builder => builder
-                .AllowAnyHeader()
-                .AllowAnyMethod()
-                .SetIsOriginAllowed((host) => true)
-                .AllowCredentials()
-            );
+            //app.UseCors(builder => builder
+            //    .AllowAnyHeader()
+            //    .AllowAnyMethod()
+            //    .SetIsOriginAllowed((host) => true)
+            //    .AllowCredentials()
+            //);
 
             if (env.IsDevelopment())
             {

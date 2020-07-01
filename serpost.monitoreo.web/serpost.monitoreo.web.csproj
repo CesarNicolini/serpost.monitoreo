@@ -65,34 +65,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="wwwroot\dist\index.html" />
-    <None Include="wwwroot\dist\main-es2015.js" />
-    <None Include="wwwroot\dist\main-es2015.js.map" />
-    <None Include="wwwroot\dist\main-es5.js" />
-    <None Include="wwwroot\dist\main-es5.js.map" />
-    <None Include="wwwroot\dist\polyfills-es2015.js" />
-    <None Include="wwwroot\dist\polyfills-es2015.js.map" />
-    <None Include="wwwroot\dist\polyfills-es5.js" />
-    <None Include="wwwroot\dist\polyfills-es5.js.map" />
-    <None Include="wwwroot\dist\runtime-es2015.js" />
-    <None Include="wwwroot\dist\runtime-es2015.js.map" />
-    <None Include="wwwroot\dist\runtime-es5.js" />
-    <None Include="wwwroot\dist\runtime-es5.js.map" />
-    <None Include="wwwroot\dist\styles.css" />
-    <None Include="wwwroot\dist\styles.css.map" />
-    <None Include="wwwroot\dist\vendor-es2015.js" />
-    <None Include="wwwroot\dist\vendor-es2015.js.map" />
-    <None Include="wwwroot\dist\vendor-es5.js" />
-    <None Include="wwwroot\dist\vendor-es5.js.map" />
-    <None Include="wwwroot\dist\_views-camaras-camaras-module-es2015.js" />
-    <None Include="wwwroot\dist\_views-camaras-camaras-module-es2015.js.map" />
-    <None Include="wwwroot\dist\_views-camaras-camaras-module-es5.js" />
-    <None Include="wwwroot\dist\_views-camaras-camaras-module-es5.js.map" />
+    <ProjectReference Include="..\serpost.monitoreo.core\serpost.monitoreo.core.csproj" />
+    <ProjectReference Include="..\serpost.monitoreo.data\serpost.monitoreo.data.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\serpost.monitoreo.core\serpost.monitoreo.core.csproj" />
-    <ProjectReference Include="..\serpost.monitoreo.data\serpost.monitoreo.data.csproj" />
+    <Folder Include="wwwroot\dist\" />
   </ItemGroup>
 
   <!--<Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
